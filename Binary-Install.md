@@ -8,14 +8,31 @@ $ version=10.16.3
 $ wget "https://npm.taobao.org/mirrors/node/v${version}/node-v${version}-linux-x64.tar.gz"
 $ tar zxf "node-v${version}-linux-x64.tar.gz"
 $ sudo mv "node-v${version}-linux-x64" /usr/local/
-$ sudo ln -s "/usr/local/node-v${version}-linux-x64/bin/node" /usr/bin/node
-$ sudo ln -s "/usr/local/node-v${version}-linux-x64/bin/npm" /usr/bin/npm
-$ sudo ln -s "/usr/local/node-v${version}-linux-x64/bin/npx" /usr/bin/npx
+$ sudo ln -s /usr/local/node-v${version}-linux-x64 /usr/local/node
 ```
 
-## 安装 npm
+## 配置PATH
 
-node内置了npm，所以可以直接使用
+### Linux
+
+```bash
+$ echo "export PATH=\"$PATH:/usr/local/node/bin\";" | sudo tee /etc/profile.d/node.sh
+$ source /etc/profile
+```
+
+### macOS
+
+```bash
+$ echo "/usr/local/node/bin" | sudo tee /etc/paths.d/usr.local.node.bin
+$ sudo chmod 0444 /etc/paths.d/usr.local.node.bin
+
+重新打开终端（Terminal）或者
+$ source /etc/paths
+```
+
+## 配置npm
+
+node内置了npm，可直接使用
 
 ```bash
 $ npm -v
@@ -26,7 +43,4 @@ $ npm -v
 ```bash
 $ sudo npm config -g set registry https://registry.npm.taobao.org
 ```
-
-
-
 

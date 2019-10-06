@@ -2,9 +2,8 @@
 
 ```bash
 $ version=10.16.3
-$ sudo rm -f /usr/bin/node
-$ sudo rm -f /usr/bin/npm
-$ sudo rm -f /usr/bin/npx
-$ sudo rm -rf "/usr/local/node-v${version}-linux-x64/"
+$ sudo rm -rf "/usr/local/node-v${version}-linux-x64"
+$ sudo rm -f "/usr/local/node"
+$ sudo rm -f "/etc/profile.d/node.sh"
 ```
 
