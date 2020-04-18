@@ -6,7 +6,7 @@
 ## Linux
 
 ```shell
-$ version=12.13.1
+$ version=12.16.2
 $ wget "https://npm.taobao.org/mirrors/node/v${version}/node-v${version}-linux-x64.tar.gz"
 $ tar zxf "node-v${version}-linux-x64.tar.gz"
 $ sudo mv "node-v${version}-linux-x64" /usr/local/
@@ -16,7 +16,7 @@ $ sudo ln -s /usr/local/node-v${version}-linux-x64 /usr/local/node
 ## macOS
 
 ```shell
-$ version=12.13.1
+$ version=12.16.2
 $ wget "https://npm.taobao.org/mirrors/node/v${version}/node-v${version}-darwin-x64.tar.gz"
 $ tar zxf "node-v${version}-darwin-x64.tar.gz"
 $ sudo mv "node-v${version}-darwin-x64" /usr/local/
@@ -35,8 +35,8 @@ $ source /etc/profile
 ### macOS
 
 ```shell
-$ echo "/usr/local/node/bin" | sudo tee /etc/paths.d/usr.local.node.bin
-$ sudo chmod 0444 /etc/paths.d/usr.local.node.bin
+$ echo "/usr/local/node/bin" | sudo tee /etc/paths.d/node.sh
+$ sudo chmod 0444 /etc/paths.d/node.sh
 ```
 
 重新打开终端（Terminal）
