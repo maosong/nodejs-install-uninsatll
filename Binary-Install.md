@@ -54,7 +54,7 @@ $ npm -v
 ```shell
 $ sudo npm config -g set registry https://registry.npm.taobao.org
 
-\# macOS增加此项，保证npx提速
+# macOS增加此项，保证npx提速
 $ ln -s /usr/local/node/etc/npmrc ~/.npmrc
 ```
 
